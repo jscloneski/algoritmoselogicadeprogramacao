@@ -5,8 +5,8 @@
     E para cada operação, mostrar um alerta com o resultado.
 */
 
-let firstNumber = prompt(firstNumber)
-let secondNumber = prompt(secondNumber)
+let firstNumber = prompt('Digite o primeiro número')
+let secondNumber = prompt('Digite o segundo número')
 
 firstNumber = Number(firstNumber)
 secondNumber = Number(secondNumber)
