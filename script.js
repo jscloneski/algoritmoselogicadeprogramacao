@@ -17,8 +17,8 @@ const multi = firstNumber * secondNumber
 const div = firstNumber / secondNumber
 const restDiv = firstNumber % secondNumber
 
-alert('Soma: ' + sum)
-alert('Subtração: ' + sub)
-alert('Multiplicação: ' + multi)
-alert('Divisão: ' + div)
-alert('Resto da divisão: ' + restDiv)
+alert('Resultado da Soma: ' + sum)
+alert('Resultado da Subtração: ' + sub)
+alert('Resultado da Multiplicação: ' + multi)
+alert('Resultado da Divisão: ' + div)
+alert('Resultado do Resto da divisão: ' + restDiv)
