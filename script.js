@@ -22,5 +22,5 @@ let result = (nota1 + nota2 + nota3) / 3
 if (result >= 5) {
     alert('Parabéns, você passou. Sua média é: ' + result)
 } else {
-    alert('Não foi desta vez, mas continua estudando. Sua média foi: ' + result)
+    alert('Não foi desta vez, mas continue estudando. Sua média foi: ' + result)
 }
