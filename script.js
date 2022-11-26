@@ -1,24 +1,26 @@
 /*
-    Capturar 2 números e fazer as operações matemáticas
-    de soma, subtração, multiplicação, divisão e resto da divisão.
+    Solicitar o nome do aluno e as 3 notas do bimestre, calcular a média daquele aluno.
 
-    E para cada operação, mostrar um alerta com o resultado.
+    Se o aluno passou no bimestre, dar os parabéns.
+
+    Se o aluno não passou no bimestre, motivar o aluno a dar seu melhor na prova de recuperação.
+
+    Em ambos os casos, mostre uma mensagem com o nome do aluno e a nota.
 */
+alert('Vamos calcular a média!')
 
-let firstNumber = prompt('Digite o primeiro número')
-let secondNumber = prompt('Digite o segundo número')
+let nota1 = prompt('Digite a nota 1:')
+let nota2 = prompt('Digite a nota 2:')
+let nota3 = prompt('Digite a nota 3:')
 
-firstNumber = Number(firstNumber)
-secondNumber = Number(secondNumber)
+nota1 = Number(nota1)
+nota2 = Number(nota2)
+nota3 = Number(nota3)
 
-const sum = firstNumber + secondNumber
-const sub = firstNumber - secondNumber
-const multi = firstNumber * secondNumber
-const div = firstNumber / secondNumber
-const restDiv = firstNumber % secondNumber
+let result = (nota1 + nota2 + nota3) / 3
 
-alert('Resultado da Soma: ' + sum)
-alert('Resultado da Subtração: ' + sub)
-alert('Resultado da Multiplicação: ' + multi)
-alert('Resultado da Divisão: ' + div)
-alert('Resultado do Resto da divisão: ' + restDiv)
+if (result >= 5) {
+    alert('Parabéns, você passou. Sua média é: ' + result)
+} else {
+    alert('Não foi desta vez, mas continua estudando. Sua média foi: ' + result)
+}
