@@ -9,9 +9,11 @@
 */
 alert('Vamos calcular a média!')
 
-let nota1 = prompt('Digite a nota 1:')
-let nota2 = prompt('Digite a nota 2:')
-let nota3 = prompt('Digite a nota 3:')
+let nome = prompt('Qual o seu nome?')
+
+let nota1 = prompt(nome + ', digite a nota 1:')
+let nota2 = prompt(nome + ', digite a nota 2:')
+let nota3 = prompt(nome + ', digite a nota 3:')
 
 nota1 = Number(nota1)
 nota2 = Number(nota2)
@@ -20,7 +22,7 @@ nota3 = Number(nota3)
 let result = (nota1 + nota2 + nota3) / 3
 
 if (result >= 5) {
-    alert('Parabéns, você passou. Sua média é: ' + result)
+    alert('Parabéns, ' + nome + '. Você passou. Sua média é: ' + result)
 } else {
-    alert('Não foi desta vez, mas continue estudando. Sua média foi: ' + result)
+    alert('Não foi desta vez, ' + nome + '. Mas continue estudando. Sua média foi: ' + result)
 }
