@@ -21,7 +21,7 @@ nota3 = Number(nota3)
 
 let result = (nota1 + nota2 + nota3) / 3
 
-if (result >= 5) {
+if (result >= 6) {
     alert('Parabéns, ' + nome + '. Você passou. Sua média é: ' + result)
 } else {
     alert('Não foi desta vez, ' + nome + '. Mas continue estudando. Sua média foi: ' + result)
