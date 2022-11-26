@@ -21,6 +21,8 @@ nota3 = Number(nota3)
 
 let result = (nota1 + nota2 + nota3) / 3
 
+result = result.toFixed(2)
+
 if (result >= 6) {
     alert('Parabéns, ' + nome + '. Você passou. Sua média é: ' + result)
 } else {
