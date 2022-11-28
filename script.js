@@ -1,28 +1,51 @@
 /*
-    Jogo da advinhação
+    Faça um programa que tenha um nenu e apresente a seguinte mensagem:
 
-    Apresente a mensagem ao usuário:
-    "Advinhe o número que estou pensando. Está entre 0 e 10"
+    Olá usuário! Digite a opção desejada
 
-    Crie uma lógica para gerar um número aleatório e verificar se o número digitado é o mesmo que o aleatório gerado pelo sistema.
+        1. Cadastrar um item na lista
+        2. Mostrar itens cadastrados
+        3. Sair do programa.
 
-    Enquanto o usuário não advinhar o número, mostrar a mensagem: "Erro. Tente novamente."
+    ---
 
-    Caso o usuário acerte o número, apresentar a mensagem: "Parabéns! Você advinhou o número em x tentativas"
+    O programa deverá capturar o número digitado pelo usuário e mostrar os seguintes cenários:
 
-    Substitua o "x" da mensagem, pelo número de tentativas.
+    Caso o usuário digite 1, ele poderá cadastrar um item em uma lista
+    Caso o usuário digite 2, ele poderá ver os itens cadastrados
+        Se não houver nenhum item cadastrado, mostrar a mensagem:
+            "Não existem itens cadastrados"
+    Caso o usuário digite 3, a aplicação deverá ser encerrada.
 */
 
-let result = prompt("Advinhe o número que estou pensando. Está entre 0 e 10")
+let option
+let items = []
 
-const randomNumber = Math.round(Math.random() * 10)
+while(option != 3) {
 
-let xAttempts = 1;
+    option = Number(prompt(`
+        Olá usuário! Digite a opção desejada
 
-while(Number(result) != randomNumber) {
-    result = prompt("Erro, tente novamente:")
-    xAttempts++
+        1. Cadastrar um item na lista
+        2. Mostrar itens cadastrados
+        3. Sair do programa.
+    `))
+
+    if(option == 1) {
+        let item = prompt("Digite o nome do item")
+        items.push(item)
+    }
+
+    else if (option == 2) {
+
+        if(items.length == 0) {
+            alert("Não existem itens cadastrados")
+        } else {
+            alert(items)
+        }
+
+    } else {
+        alert("Tchau")
+    }
 }
-
-alert(`Parabéns, você advinhou o número em ${xAttempts} tentativa(s)!`)
 
