@@ -24,17 +24,19 @@ const students = [
     },
 ]
 
-let result = (students.firstGrade + students.secondGrade) / 2
+
 
     function printGradeAverage(student) {
         return`
             O estudante ${student.name} possui a média final de
             ${((student.firstGrade + student.secondGrade) / 2).toFixed (2)}
         `
-        
-    }
+        }
+
 
     for (let student of students) {
         let gradeAverage = printGradeAverage(student)
         alert(gradeAverage)
+
+
     }
