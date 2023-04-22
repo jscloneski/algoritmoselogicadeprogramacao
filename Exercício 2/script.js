@@ -1,42 +1,33 @@
-const students = [
+let listaDeEstudantes = [
     {
-        name: "João",
-        firstGrade: 8,
-        secondGrade: 9,
+        nomeDoEstudante: 'João',
+        primeiraNota: 6,
+        segundaNota: 9,
     },
 
     {
-        name: "Fulano",
-        firstGrade: 4,
-        secondGrade: 9,
+        nomeDoEstudante: 'Fulano',
+        primeiraNota: 5,
+        segundaNota: 3,
     },
 
     {
-        name: "Cicrano",
-        firstGrade: 10,
-        secondGrade: 6,
-    },
-
-    {
-        name: "Beltrano",
-        firstGrade: 8,
-        secondGrade: 6,
-    },
+        nomeDoEstudante: 'Cicrano',
+        primeiraNota: 8,
+        segundaNota: 8,
+    }        
 ]
 
+function calculaMedia(primeiraNota,segundaNota) {
+let media = (primeiraNota + segundaNota) / 2
+return media
+}
 
 
-    function printGradeAverage(student) {
-        return`
-            O estudante ${student.name} possui a média final de
-            ${((student.firstGrade + student.secondGrade) / 2).toFixed (2)}
-        `
-        }
+for(let estudante of listaDeEstudantes){
+    mediaIndividual = calculaMedia(estudante.primeiraNota, estudante.segundaNota)
+    let aprovadoOuNao = mediaIndividual < 7 ? 'Infelizmente não foi dessa vez. Estude mais' : 'Parabéns pela sua aprovação'
 
-
-    for (let student of students) {
-        let gradeAverage = printGradeAverage(student)
-        alert(gradeAverage)
-
-
-    }
+    alert(`A média de ${estudante.nomeDoEstudante} é ${mediaIndividual}.
+${aprovadoOuNao}`)
+}      
